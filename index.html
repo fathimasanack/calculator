@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+        height: 100vh;
+        background-color: #c9bded;
+    }
+    button{
+        height: 100%;
+        width: 100%;
+        font-weight: 600;
+    }
+    .column{
+        padding: 0;
+        margin: 0;
+    }
+    .display{
+        height: 80px;
+
+    }
+    #dis{
+        width: 100%;
+        height: 100%;
+        border: solid 5px #4c465f;
+
+    }
+    .cal{
+        width: 500px;
+        height: fit-content;
+        border: solid 5px white;
+    }
+    .row{
+        width: 100%;
+    }
+    .op{
+        background-color: #c5b1ff;
+    }
+    .eq{
+        background-color: #5f4b9b;
+    }
+</style>
+<body class=" d-flex justify-content-center align-items-center">
+   <div class="cal">
+        <div class="display">
+            <input id="dis" type="text" class="w-100 p-4 " placeholder="0" readonly>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <div class="row">
+                <div class="column col-9"><button onClick="clearCalcScreen()" type="button" class=" border rounded-0">AC</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('/')" type="button" class=" border p-3 rounded-0 op"><i class="fa-solid fa-divide" style="color: #5f4b9b;"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column col-3"><button onClick="displayData('7')" type="button" class=" border rounded-0">7</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('8')" type="button" class=" border rounded-0">8</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('9')" type="button" class=" border rounded-0">9</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('*')" type="button" class=" p-3 border rounded-0 op"><i class="fa-solid fa-xmark" style="color: #5f4b9b;"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column col-3"><button onClick="displayData('4')" type="button" class=" border rounded-0">4</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('5')" type="button" class=" border rounded-0">5</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('6')" type="button" class=" border rounded-0">6</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('-')" type="button" class=" p-3 border rounded-0 op"><i class="fa-solid fa-minus" style="color: #5f4b9b;"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column col-3"><button onClick="displayData('1')" type="button" class=" border rounded-0">1</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('2')" type="button" class=" border rounded-0">2</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('3')" type="button" class=" border rounded-0">3</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('+')" type="button" class=" p-3 border rounded-0 op"><i class="fa-solid fa-plus" style="color: #5f4b9b;"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column col-3"><button onClick="displayData('0')" type="button" class=" border rounded-0">0</button>
+                </div>
+                <div class="column col-3"><button onClick="displayData('.')" type="button" class=" border rounded-0">.</button>
+                </div>
+                <div class="column col-3"><button onClick="removeLastCalcItem()"  type="button" class=" border rounded-0">DEL</button>
+                </div>
+                <div class="column col-3"><button onClick="evaluateExpr()" type="button" class="p-3 border rounded-0 eq"><i class="fa-solid fa-equals" style="color:#d7d7d7;"></i></button>
+                </div>
+            </div>
+        </div>
+    
+   </div>
+</body>
+<!-- external js -->
+<script src="./main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
